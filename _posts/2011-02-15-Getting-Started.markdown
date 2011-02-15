@@ -3,7 +3,6 @@ layout: index
 title: Getting Started
 ---
 
-##Getting Started
 I'm in the process of cleaning up the code for [EarthExplorer.info] so I can
 put it on [GitHub]. Mainly adding a little documentation and cleaning out 
 private data.
