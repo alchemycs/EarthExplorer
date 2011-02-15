@@ -32,3 +32,4 @@ check it out, you can thank me later :)
 [EarthExplorer.info]: http://earthexplorer.info/
 [agavi]: http://www.agavi.org/
 [GitHub]: https://github.com/alchemycs/EarthExplorer
+[Yahoo! GeoPlanet]: http://developer.yahoo.com/geo/geoplanet/
