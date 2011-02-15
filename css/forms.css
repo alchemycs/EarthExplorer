@@ -1,0 +1,135 @@
+fieldset
+{
+    border: 1px solid gray;
+    background-color: #EAEAEA;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+legend
+{
+    margin-left: 1em;
+    font-weight: bold;
+    border: 1px solid gray;
+    background-color: #FFFFFF;
+
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-bottomright: 10px;
+
+/*
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+*/
+    padding: 0 .5em;
+
+}
+
+fieldset ol {
+
+}
+
+fieldset ol li
+{
+    list-style: none;
+    padding-bottom: 1em;
+}
+
+fieldset.formSubmit
+{
+    border-style: none;
+    float: none;
+    width: auto;
+    padding-left: 11em;
+    background-color: transparent;
+}
+
+fieldset ol li
+{
+    float: left;
+    clear: left;
+    width: 100%;
+}
+
+label
+{
+    float: left;
+    width: 10em;
+    margin-right: 1em;
+    text-align: right;
+}
+
+label em
+{
+    display: block;
+    /*color: #060;*/
+    color: #060;
+    font-size: 60%;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+fieldset fieldset
+{
+    border: none;
+    margin-bottom: -1em;
+    background-color: transparent;
+}
+
+fieldset fieldset legend
+{
+    margin-left: 0;
+    font-weight: normal;
+    border: none;
+    background-color: transparent;
+}
+
+fieldset fieldset ol
+{
+    position: relative;
+    top: -1em;
+    margin: 0 0 0 11em;
+    /*padding: 0;*/
+}
+
+fieldset fieldset ol li
+{
+    padding: 0;
+}
+
+fieldset fieldset label
+{
+    float: none;
+    width: auto;
+    margin-right: auto;
+}
+
+input.error
+{
+    background-color: #FFFFBB;
+}
+
+div.errors
+{
+    color: #990000;
+    
+}
+
+form:before
+{
+    border: 1px solid red;
+}
+
+ul.errors
+{
+    background-color: #FFFFBB;
+    color: #990000;
+    border: 1px dashed gray;
+    padding: 1em;
+    margin: 1em 0;
+}
+ul.errors li
+{
+    list-style: inside;
+}
