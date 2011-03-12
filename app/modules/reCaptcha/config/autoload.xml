@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations xmlns="http://agavi.org/agavi/config/parts/autoload/1.0" xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0">
+	<ae:configuration>
+		
+		<autoload name="EEreCaptchaBaseAction">%core.module_dir%/reCaptcha/lib/action/EEreCaptchaBaseAction.class.php</autoload>
+		<autoload name="EEreCaptchaBaseModel">%core.module_dir%/reCaptcha/lib/model/EEreCaptchaBaseModel.class.php</autoload>
+		<autoload name="EEreCaptchaBaseView">%core.module_dir%/reCaptcha/lib/view/EEreCaptchaBaseView.class.php</autoload>
+		
+	</ae:configuration>
+</ae:configurations>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations xmlns="http://agavi.org/agavi/config/parts/autoload/1.0" xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0" parent="%core.system_config_dir%/autoload.xml">
+	<ae:configuration>
+		
+		<autoload name="EEBaseAction">%core.lib_dir%/action/EEBaseAction.class.php</autoload>
+		<autoload name="EEBaseModel">%core.lib_dir%/model/EEBaseModel.class.php</autoload>
+		<autoload name="EEBaseView">%core.lib_dir%/view/EEBaseView.class.php</autoload>
+
+                <autoload name="EEUser">%core.lib_dir%/user/EEUser.class.php</autoload>
+
+                <autoload name="WOEIDRoutingCallback">%core.lib_dir%/route/WOEIDRoutingCallback.class.php</autoload>
+		
+	</ae:configuration>
+</ae:configurations>

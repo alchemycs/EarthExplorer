@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+	xmlns="http://agavi.org/agavi/config/parts/routing/1.0">
+	<ae:configuration>
+		<routes>
+
+			<!-- default action for "/" -->
+			<route name="Home" pattern="^/Home$" 
+				module="%actions.default_module%"
+				action="%actions.default_action%" />
+			<route pattern="^/$" module="%actions.default_module%" 
+				action="%actions.default_action%" />
+			<route name="Explore" pattern="^/Explore" module="Explorer">
+				<route name=".Index" pattern="^$" action="Index" />
+				<route name=".Location" 
+					pattern="^(/{woeid:\d+})?(-{slug_name:[0-9a-zA-Z_\-]+})?"
+					action="none">
+					<callback class="WOEIDRoutingCallback" />
+					<default for="woeid">/{1}</default>
+					<route pattern="^$" action="Location" />
+					<route name=".Contains" pattern="^/Contains" 
+						action="LocationContains" />
+					<route name=".Neighbours" pattern="^/Neighbo(u)?rs" 
+						action="LocationNeighbours" />
+					<route name=".BelongsTo" pattern="^/BelongsTo" 
+						action="LocationBelongsTo" />
+				</route>
+				<route name=".Locate" pattern="^/Locate$" action="Locate" />
+
+			</route>
+
+			<route name="TimeZones" pattern="^/TimeZones" module="TimeZones"
+				action="Index" />
+			<route name="TimeZone" pattern="^/TimeZone/(time_zone:.+)"
+				module="TimeZones" action="Zone" />
+
+			<route name="Contact" pattern="^/Contact$" module="Contact"
+				action="%actions.default_action%" />
+
+
+
+			<route name="PrivacyPolicy" pattern="^/PrivacyPolicy$" 
+				module="%actions.default_module%" action="PrivacyPolicy" />
+			<!-- 
+				Taken from http://ownterms.pbworks.com/, but I'm 
+				winding up Alchemy Computer Solutions and making this project
+				my own and persnal.
+			-->
+			<!--
+			<route name="TermsOfService" pattern="^/TermsOfService" 
+				module="%actions.default_module%" action="TermsOfService" />
+			 -->
+		</routes>
+	</ae:configuration>
+</ae:configurations>

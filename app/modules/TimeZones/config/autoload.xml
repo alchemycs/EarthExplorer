@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations xmlns="http://agavi.org/agavi/config/parts/autoload/1.0" xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0">
+	<ae:configuration>
+		
+		<autoload name="EETimeZonesBaseAction">%core.module_dir%/TimeZones/lib/action/EETimeZonesBaseAction.class.php</autoload>
+		<autoload name="EETimeZonesBaseModel">%core.module_dir%/TimeZones/lib/model/EETimeZonesBaseModel.class.php</autoload>
+		<autoload name="EETimeZonesBaseView">%core.module_dir%/TimeZones/lib/view/EETimeZonesBaseView.class.php</autoload>
+		
+	</ae:configuration>
+</ae:configurations>

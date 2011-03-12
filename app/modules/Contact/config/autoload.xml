@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations xmlns="http://agavi.org/agavi/config/parts/autoload/1.0" xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0">
+	<ae:configuration>
+		
+		<autoload name="EEContactBaseAction">%core.module_dir%/Contact/lib/action/EEContactBaseAction.class.php</autoload>
+		<autoload name="EEContactBaseModel">%core.module_dir%/Contact/lib/model/EEContactBaseModel.class.php</autoload>
+		<autoload name="EEContactBaseView">%core.module_dir%/Contact/lib/view/EEContactBaseView.class.php</autoload>
+		
+	</ae:configuration>
+</ae:configurations>

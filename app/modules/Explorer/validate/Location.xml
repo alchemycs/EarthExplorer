@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+	xmlns="http://agavi.org/agavi/config/parts/validators/1.0"
+	xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+	parent="%core.module_dir%/Explorer/config/validators.xml"
+>
+	<ae:configuration>
+		
+		<validators>
+                    <validator class="number">
+                        <argument>woeid</argument>
+                        <ae:parameter name="min">1</ae:parameter>
+                        <error>Missing a valid woeid</error>
+                    </validator>
+
+                    <validator class="isset" required="false">
+                        <argument>slug_name</argument>
+                    </validator>
+		</validators>
+		
+	</ae:configuration>
+</ae:configurations>

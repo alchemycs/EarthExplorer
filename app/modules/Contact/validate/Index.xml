@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+	xmlns="http://agavi.org/agavi/config/parts/validators/1.0"
+	xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+	parent="%core.module_dir%/Contact/config/validators.xml"
+>
+	<ae:configuration>
+		
+		<validators method="write">
+                    <validator class="string">
+                        <argument>name</argument>
+                        <error>A name is required</error>
+                    </validator>
+                    <validator class="string">
+                        <argument>subject</argument>
+                        <error>A subject is required</error>
+                    </validator>
+                    <validator class="email">
+                        <argument>email</argument>
+                        <error>A valid email address is required</error>
+                    </validator>
+                    <validator class="string">
+                        <argument>message</argument>
+                        <error>A message is required</error>
+                    </validator>
+
+                    <validator class="isnotempty">
+                        <argument>recaptcha_challenge_field</argument>
+                        <error>Missing anti-spam challenge field</error>
+                    </validator>
+                    <validator class="isnotempty">
+                        <argument>recaptcha_response_field</argument>
+                        <error>Missing anti-spam response field</error>
+                    </validator>
+
+		</validators>
+		
+	</ae:configuration>
+</ae:configurations>

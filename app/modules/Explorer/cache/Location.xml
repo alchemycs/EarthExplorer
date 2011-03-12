@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0" xmlns="http://agavi.org/agavi/config/parts/caching/1.0">
+	<ae:configuration>
+		<caching lifetime="24 hours" enabled="false">
+                    <groups>
+                        <group>location_by_woeid</group>
+                        <group source="configuration_directive">core.environment</group>
+                        <group source="request_data">woeid</group>
+                    </groups>
+                    <output_type>
+                        <layer name="content" >
+
+                        </layer>
+                        <template_variable>_title</template_variable>
+
+                    </output_type>
+		</caching>
+	</ae:configuration>
+</ae:configurations>

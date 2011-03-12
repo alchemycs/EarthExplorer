@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations xmlns="http://agavi.org/agavi/config/parts/autoload/1.0" xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0">
+	<ae:configuration>
+		
+		<autoload name="EEAdSenseBaseAction">%core.module_dir%/AdSense/lib/action/EEAdSenseBaseAction.class.php</autoload>
+		<autoload name="EEAdSenseBaseModel">%core.module_dir%/AdSense/lib/model/EEAdSenseBaseModel.class.php</autoload>
+		<autoload name="EEAdSenseBaseView">%core.module_dir%/AdSense/lib/view/EEAdSenseBaseView.class.php</autoload>
+		
+	</ae:configuration>
+</ae:configurations>

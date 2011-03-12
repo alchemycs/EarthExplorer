@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="Earth Explorer" basedir="." default="status">
+
+    <!--
+          Define project-specific or custom build targets.
+          -->
+
+    <fileset id="deploymentFiles" dir="${project.directory}">
+      <include name="pub/**"/>
+      <include name="libs/**"/>
+      <include name="app/**"/>
+      <exclude name="pub/index.php"/>
+      <exclude name="app/cache/*"/>
+      <exclude name="app/cache/**/*"/>
+      <exclude name="app/GeoNamesCache/*"/>
+      <exclude name="app/YQLCache/*"/>
+      <exclude name="app/log/*"/>
+    </fileset>
+
+    <property file="${project.directory}/earthexplorer.properties"/>
+
+    <target name="configure" description="Configures the local development environment">
+      <echo>Source: ${project.directory}</echo>
+      <propertyprompt propertyName="deployment.environment" promptText="Deployment Environment" useExistingValue="false" defaultValue="development"/>
+      <echo>Environment: ${deployment.environment}</echo>
+        <copy file="${project.directory}/dev/pub/index.php" todir="${project.directory}/pub" overwrite="true">
+            <filterchain>
+                <replacetokens begintoken="%%" endtoken="%%">
+                    <token key="PUBLIC_ENVIRONMENT" value="${deployment.environment}"/>
+                    <token key="AGAVI_SOURCE_LOCATION" value="${deployment.path}/libs/agavi"/>
+                </replacetokens>
+            </filterchain>
+        </copy>
+        <copy file="${project.directory}/dev/config/settings.xml" todir="${project.directory}/app/config" overwrite="true">
+            <filterchain>
+                <replacetokens begintoken="%%" endtoken="%%">
+                    <token key="YAHOO.ymappid" value="${YAHOO.ymappid}"/>
+                    <token key="reCAPTCHA.publicKey" value="${reCAPTCHA.publicKey}"/>
+                    <token key="reCAPTCHA.privateKey" value="${reCAPTCHA.privateKey}"/>
+                    <token key="Google.site.verification" value="${Google.site.verification}"/>
+                    <token key="Google.analytics" value="${Google.analytics}"/>
+                    <token key="UserVoice.key" value="${UserVoice.key}"/>
+                    <token key="UserVoice.host" value="${UserVoice.host}"/>
+                    <token key="UserVoice.forum" value="${UserVoice.forum}"/>
+                    <token key="Contact.email" value="${Contact.email}"/>
+                    <token key="Contact.subjectPrefix" value="${Contact.subjectPrefix}"/>
+                </replacetokens>
+            </filterchain>
+        </copy>
+    </target>
+
+    <target name="deploy" description="Deploys the development code to the live location">
+        <echo>Source: ${project.directory}</echo>
+        <propertyprompt propertyName="deployment.path" promptText="Destination" useExistingValue="false"/>
+        <echo>Destination: ${deployment.path}</echo>
+        <propertyprompt propertyName="deployment.environment" promptText="Deployment Environment" useExistingValue="false" defaultValue="${deployment.environment}"/>
+        <echo>Environment: ${deployment.environment}</echo>
+        <mkdir dir="${deployment.path}"/>
+        <copy todir="${deployment.path}" includeemptydirs="true">
+            <fileset refid="deploymentFiles"/>
+        </copy>
+        <copy file="${project.directory}/dev/pub/index.php" todir="${deployment.path}/pub" overwrite="true">
+            <filterchain>
+                <replacetokens begintoken="%%" endtoken="%%">
+                    <token key="PUBLIC_ENVIRONMENT" value="${deployment.environment}"/>
+                    <token key="AGAVI_SOURCE_LOCATION" value="${deployment.path}/libs/agavi"/>
+                </replacetokens>
+            </filterchain>
+        </copy>
+        <copy file="${project.directory}/dev/config/settings.xml" todir="${deployment.path}/app/config" overwrite="true">
+            <filterchain>
+                <replacetokens begintoken="%%" endtoken="%%">
+                    <token key="YAHOO.ymappid" value="${YAHOO.ymappid}"/>
+                    <token key="reCAPTCHA.publicKey" value="${reCAPTCHA.publicKey}"/>
+                    <token key="reCAPTCHA.privateKey" value="${reCAPTCHA.privateKey}"/>
+                    <token key="Google.site.verification" value="${Google.site.verification}"/>
+                    <token key="Google.analytics" value="${Google.analytics}"/>
+                    <token key="UserVoice.key" value="${UserVoice.key}"/>
+                    <token key="UserVoice.host" value="${UserVoice.host}"/>
+                    <token key="UserVoice.forum" value="${UserVoice.forum}"/>
+                    <token key="Contact.email" value="${Contact.email}"/>
+                    <token key="Contact.subjectPrefix" value="${Contact.subjectPrefix}"/>
+                </replacetokens>
+            </filterchain>
+        </copy>
+        <chmod mode="0777">
+            <fileset dir="${deployment.path}/app">
+                <include name="cache/**"/>
+                <include name="log/**"/>
+                <include name="YQLCache/**"/>
+                <include name="GeoNamesCache/**"/>
+            </fileset>
+        </chmod>
+    </target>
+
+</project>
+
