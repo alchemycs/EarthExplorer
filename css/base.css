@@ -91,7 +91,7 @@ a:hover
 #hd {
     font-size: 197%;
     font-weight: bold;
-    background: url(../images/img03.jpg) no-repeat left top;
+    background: url(/EarthExplorer/images/img03.jpg) no-repeat left top;
     height: 235px;
 }
 
@@ -142,7 +142,7 @@ a:hover
 
 #ft {
     text-align: center;
-    background: url(../images/img15.jpg) no-repeat left top;
+    background: url(/EarthExplorer/images/img15.jpg) no-repeat left top;
     color: #887450;
     height: 255px;
     padding-top: 50px;
@@ -208,13 +208,13 @@ a:hover
 }
 
 html {
-    background: #f7f7f7 url(../images/img01.jpg) repeat left top;
+    background: #f7f7f7 url(/EarthExplorer/images/img01.jpg) repeat left top;
     color: #5a554e;
 }
 
 #wrapper
 {
-    background: url(../images/img02.jpg) repeat-x left top;
+    background: url(/EarthExplorer/images/img02.jpg) repeat-x left top;
 }
 
 
@@ -222,7 +222,7 @@ html {
 	height: 65px;
 	margin: 0 auto;
 	padding: 0;
-	background: url(../images/img04.jpg) no-repeat left top;
+	background: url(/EarthExplorer/images/img04.jpg) no-repeat left top;
 }
 
 #menu ul {
@@ -244,7 +244,7 @@ html {
 	height: 39px;
 	margin-left: 10px;
 	padding-top: 15px;
-	background: url(../images/img05.jpg) repeat-x left top;
+	background: url(/EarthExplorer/images/img05.jpg) repeat-x left top;
 	text-decoration: none;
 	text-align: center;
 	font-weight: normal;
@@ -257,7 +257,7 @@ html {
 }
 
 #menu .selected a {
-	background: url(../images/img06.jpg) no-repeat left top;
+	background: url(/EarthExplorer/images/img06.jpg) no-repeat left top;
 	padding-left: 0;
 	color: #493E2B;
 }
