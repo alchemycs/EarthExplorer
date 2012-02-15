@@ -1,3 +1,14 @@
+DEPRECATED
+==========
+This site is being completely re-written and due for re-leaunch late February 2012.
+
+If you would like to take a sneak preview of the new site, please visit:
+
+<http://earth-explorer.appspot.com>
+
+Thanks! Feedback is much appreciated!
+
+
 Introduction
 ============
 [EarthExplorer.info] was first concieved one weekend while talking with my 
