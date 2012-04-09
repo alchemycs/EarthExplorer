@@ -1,10 +1,10 @@
 DEPRECATED
 ==========
-This site is being completely re-written and due for re-leaunch late February 2012.
+This site has been completely re-written and launched in March 2012.
 
-If you would like to take a sneak preview of the new site, please visit:
+This PHP version is no longer being supported.
 
-<http://earth-explorer.appspot.com>
+Please visit <http://www.earthexplorer.info> so see the new version in action.
 
 Thanks! Feedback is much appreciated!
 
